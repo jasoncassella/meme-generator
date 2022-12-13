@@ -9,6 +9,9 @@ body {
 
 main {
   padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .header {
