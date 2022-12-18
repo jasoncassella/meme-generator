@@ -20,19 +20,14 @@ export default function Meme() {
 
 	function handleChange(event) {
 		const { name, value } = event.target;
-		setMeme(prevMeme => {
-			return { ...prevMeme, [name]: value };
-		});
+		setMeme(prevMeme => ({ ...prevMeme, [name]: value }));
 	}
 
 	function getMemeImage() {
 		const memesArray = allMemeImages.data.memes;
 		const randomNumber = Math.floor(Math.random() * memesArray.length);
 		const url = memesArray[randomNumber].url;
-		setMeme(prevMeme => ({
-			...prevMeme,
-			randomImage: url,
-		}));
+		setMeme(prevMeme => ({ ...prevMeme, randomImage: url }));
 	}
 
 	return (
